@@ -6,11 +6,12 @@ The Virtual Tourist app downloads and stores images from Flickr. The app allows 
 
 ## Screenshots
 
-![Travel Map Screen](https://raw.githubusercontent.com/alhilali/Virtual-Tourist/master/Screenshots/TravelMapScreen.png)
-![Album Screen](https://raw.githubusercontent.com/alhilali/Virtual-Tourist/master/Screenshots/AlbumScreen.png)
+Travel Map Screen       |  Album Screen
+:-------------------------:|:-------------------------:
+![Travel Map Screen](https://raw.githubusercontent.com/alhilali/Virtual-Tourist/master/Screenshots/TravelMapScreen.png) | ![Album Screen](https://raw.githubusercontent.com/alhilali/Virtual-Tourist/master/Screenshots/AlbumScreen.png)
 
 ## Installation
-1. Download project zip or clone the repo.
+1. Download project zip or clone the repo https://github.com/alhilali/Virtual-Tourist.git.
 2. Navigate to the project folder in Terminal.
 3. Run pod install to install external libraries
 3. Open Virtual Tourist.xcworkspace.
