@@ -15,6 +15,7 @@ class PhotoAlbumVC: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var pin: Pin?
     var fetchedResultsController: NSFetchedResultsController<Photo>!
@@ -24,6 +25,7 @@ class PhotoAlbumVC: UIViewController, MKMapViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.startAnimating()
         
         updateFlowLayout(view.frame.size)
         mapView.isZoomEnabled = false
@@ -53,6 +55,7 @@ class PhotoAlbumVC: UIViewController, MKMapViewDelegate {
         if photoSet != nil && photoSet?.count ?? 0 > 0 {
             album = Array(photoSet!) as! [Photo]
             self.collectionView.reloadData()
+            activityIndicator.stopAnimating()
             return true
         }
         return false
@@ -125,6 +128,7 @@ class PhotoAlbumVC: UIViewController, MKMapViewDelegate {
             DataController.shared.context.delete(photo)
         }
         save()
+        activityIndicator.startAnimating()
         fetchPhotosFromAPI(pin!)
     }
     

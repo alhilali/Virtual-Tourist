@@ -34,29 +34,6 @@ class TravelLocationsVC: UIViewController, MKMapViewDelegate {
         }
     }
     
-    // MARK: - Actions
-    @IBAction func addPinGesture(_ sender: UILongPressGestureRecognizer) {
-        let location = sender.location(in: mapView)
-        let coordinate = mapView.convert(location, toCoordinateFrom: mapView)
-        
-        if sender.state == .began {
-            pinAnnotation = MKPointAnnotation()
-            pinAnnotation!.coordinate = coordinate
-            
-            print("\(#function) Coordinate: \(coordinate.latitude),\(coordinate.longitude)")
-            
-            mapView.addAnnotation(pinAnnotation!)
-        } else if sender.state == .changed {
-            pinAnnotation!.coordinate = coordinate
-        } else if sender.state == .ended {
-            let pin = Pin(context: DataController.shared.context)
-            pin.latitude = String(pinAnnotation!.coordinate.latitude)
-            pin.longitude = String(pinAnnotation!.coordinate.longitude)
-            try? DataController.shared.context.save()
-            
-        }
-    }
-    
     // MARK: - Helpers
     private func loadAllPins() -> [Pin]? {
         var pins: [Pin]?
@@ -81,7 +58,7 @@ class TravelLocationsVC: UIViewController, MKMapViewDelegate {
         return pin
     }
     
-    func showPins(_ pins: [Pin]) {
+    private func showPins(_ pins: [Pin]) {
         for pin in pins where pin.latitude != nil && pin.longitude != nil {
             let annotation = MKPointAnnotation()
             let lat = Double(pin.latitude!)!
@@ -90,6 +67,29 @@ class TravelLocationsVC: UIViewController, MKMapViewDelegate {
             mapView.addAnnotation(annotation)
         }
         mapView.showAnnotations(mapView.annotations, animated: true)
+    }
+    
+    // MARK: - Actions
+    @IBAction func addPinGesture(_ sender: UILongPressGestureRecognizer) {
+        let location = sender.location(in: mapView)
+        let coordinate = mapView.convert(location, toCoordinateFrom: mapView)
+        
+        if sender.state == .began {
+            pinAnnotation = MKPointAnnotation()
+            pinAnnotation!.coordinate = coordinate
+            
+            print("\(#function) Coordinate: \(coordinate.latitude),\(coordinate.longitude)")
+            
+            mapView.addAnnotation(pinAnnotation!)
+        } else if sender.state == .changed {
+            pinAnnotation!.coordinate = coordinate
+        } else if sender.state == .ended {
+            let pin = Pin(context: DataController.shared.context)
+            pin.latitude = String(pinAnnotation!.coordinate.latitude)
+            pin.longitude = String(pinAnnotation!.coordinate.longitude)
+            try? DataController.shared.context.save()
+            
+        }
     }
     
 }

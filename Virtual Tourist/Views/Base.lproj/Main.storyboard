@@ -115,6 +115,7 @@
                                         <items>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="ali-oI-0pA"/>
                                             <barButtonItem title="New Collection" id="cB1-TS-TJY">
+                                                <color key="tintColor" red="0.020184123759999999" green="0.57451245419999997" blue="0.65963001939999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <connections>
                                                     <action selector="newCollection:" destination="hkX-Ic-Jjb" id="7sG-o2-Hji"/>
                                                 </connections>
@@ -124,17 +125,24 @@
                                     </toolbar>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="jz2-lE-QAe">
+                                <rect key="frame" x="188.5" y="473.5" width="37" height="37"/>
+                                <color key="color" red="0.020184123759999999" green="0.57451245419999997" blue="0.65963001939999999" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="jz2-lE-QAe" firstAttribute="centerX" secondItem="mVY-ZH-TZS" secondAttribute="centerX" id="45o-lP-lxd"/>
                             <constraint firstItem="SCs-Sp-Lqz" firstAttribute="trailing" secondItem="mVY-ZH-TZS" secondAttribute="trailing" id="Bwe-9g-9x6"/>
                             <constraint firstItem="mVY-ZH-TZS" firstAttribute="bottom" secondItem="Dx8-9r-dL6" secondAttribute="bottom" id="PAv-FI-G74"/>
                             <constraint firstItem="mVY-ZH-TZS" firstAttribute="leading" secondItem="SCs-Sp-Lqz" secondAttribute="leading" id="TR7-Fg-op1"/>
                             <constraint firstItem="mVY-ZH-TZS" firstAttribute="top" secondItem="SCs-Sp-Lqz" secondAttribute="top" id="bHm-NU-7qZ"/>
+                            <constraint firstItem="jz2-lE-QAe" firstAttribute="centerY" secondItem="mVY-ZH-TZS" secondAttribute="centerY" id="z1Y-p5-dex"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SCs-Sp-Lqz"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="jz2-lE-QAe" id="10b-Si-EE6"/>
                         <outlet property="collectionView" destination="3oB-En-qc8" id="ew8-0W-53o"/>
                         <outlet property="flowLayout" destination="9UH-Ou-FvF" id="6Xm-5T-S6n"/>
                         <outlet property="mapView" destination="Qz7-Z2-Mbc" id="Yj0-wQ-mR8"/>
@@ -167,4 +175,5 @@
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
