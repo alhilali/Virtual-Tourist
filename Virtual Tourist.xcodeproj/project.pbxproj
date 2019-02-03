@@ -25,6 +25,7 @@
 		1755BBC82205F2ED00AAD14C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1755BBC72205F2ED00AAD14C /* Network.swift */; };
 		1755BBCE220610C300AAD14C /* PhotoAlbumVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1755BBCD220610C300AAD14C /* PhotoAlbumVC+Extension.swift */; };
 		1755BBD02206114200AAD14C /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1755BBCF2206114200AAD14C /* PhotoCollectionViewCell.swift */; };
+		1769B3D522074F88009B3E2E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1769B3D422074F88009B3E2E /* README.md */; };
 		F0CD450910D8667E661817BF /* Pods_Virtual_Tourist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74227220DCBD22994A007624 /* Pods_Virtual_Tourist.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		1755BBC72205F2ED00AAD14C /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1755BBCD220610C300AAD14C /* PhotoAlbumVC+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoAlbumVC+Extension.swift"; sourceTree = "<group>"; };
 		1755BBCF2206114200AAD14C /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		1769B3D422074F88009B3E2E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		74227220DCBD22994A007624 /* Pods_Virtual_Tourist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Virtual_Tourist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FA5EFD3A68C715A75AD835 /* Pods-Virtual Tourist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Virtual Tourist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Virtual Tourist/Pods-Virtual Tourist.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +71,7 @@
 		1755BB6F2205D5EC00AAD14C = {
 			isa = PBXGroup;
 			children = (
+				1769B3D422074F88009B3E2E /* README.md */,
 				1755BB7A2205D5EC00AAD14C /* Virtual Tourist */,
 				1755BB792205D5EC00AAD14C /* Products */,
 				AD012FF71803FE76C83DA36F /* Pods */,
@@ -87,13 +90,13 @@
 		1755BB7A2205D5EC00AAD14C /* Virtual Tourist */ = {
 			isa = PBXGroup;
 			children = (
+				1755BB7B2205D5EC00AAD14C /* AppDelegate.swift */,
 				1755BBC42205F0E600AAD14C /* Networking */,
 				1755BBA72205E72F00AAD14C /* Extensions */,
 				1755BB932205D8C000AAD14C /* Resources */,
 				1755BB922205D8AB00AAD14C /* Controllers */,
 				1755BB912205D8A400AAD14C /* Models */,
 				1755BB902205D88F00AAD14C /* Views */,
-				1755BB7B2205D5EC00AAD14C /* AppDelegate.swift */,
 			);
 			path = "Virtual Tourist";
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			files = (
 				1755BB892205D5ED00AAD14C /* LaunchScreen.storyboard in Resources */,
 				1755BB862205D5ED00AAD14C /* Assets.xcassets in Resources */,
+				1769B3D522074F88009B3E2E /* README.md in Resources */,
 				1755BB812205D5EC00AAD14C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
