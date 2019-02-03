@@ -18,21 +18,17 @@ Travel Map Screen       |  Album Screen
 4. Build and Run in iOS Simulator or on your device.
 
 ## About Virtual Tourist
-The app has two view controller scenes:
+The app has two view controllers:
 
-- **MapController** - shows the map and allows user to drop pins around the world. Users can drag pin to a new location after
-dropping them. As soon as a pin is dropped photo data for the pin location is fetched from Flickr. The actual photo
-downloads occur in the CollectionController.
+- **TravelLocationsVC** - It shows a map where you can place pins at your choice on long press. These pins will be saved and can be retrieved at any time. Clicking on on of these pins will take you to the 2nd scene (**PhotoAlbumVC**).
 
-- **CollectionController** - allow users to download photos and edit an album for a location. Users can create new
-collections and delete photos from existing albums.
+- **PhotoAlbumVC** - It will fetch pictures taken in that location using Flicker's public API. You can delete any picture by selecting it. You can fetch a new collection by using **New Collection** at the bottom.
 
-Application uses CoreData to store Pins (`NSManagedObjectContext.executeFetchRequest`) and Photos 
-(`NSFetchedResultsController`) objects. All API calls run in background (`NSURLSession.dataTaskWithRequest`).
-Preloaded files saved in memory cache (`NSCache`) and file system (`NSFileManager`) and removed as soon as Photo object 
-removed from CoreData.
+## Features
 
-
+- CoreData
+- Kingfisher
+- Flicker API (https://www.flickr.com/services/api/)
 
 ## Requirements
 
